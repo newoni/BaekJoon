@@ -9,3 +9,4 @@ problem number | O or X
 * 2487    | X
 * 2557    | O
 * 2839    | O
+* 11812   | X    | memory
