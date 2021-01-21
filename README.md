@@ -6,6 +6,7 @@ problem number | O or X
 
 * 1000    | O
 * 1002    | O
+* 2108    | X    | time
 * 2487    | X    | time
 * 2557    | O
 * 2839    | O
