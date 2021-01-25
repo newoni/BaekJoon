@@ -11,7 +11,7 @@ problem number | O or X
 * ### 2487    | X    | time
 * ### 2557    | O
 * ### 2751    | O
-- ##### TLE on python, solved with pypy3.
+##### TLE on python, solved with pypy3.
 * ### 2839    | O
 * ### 8958    | O
 * ### 10171   | O
