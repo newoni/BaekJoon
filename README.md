@@ -6,9 +6,10 @@ problem number | O or X
 
 * ### 1000    | O
 * ### 1002    | O
-* ### 2108    | X    | time
+* ### 1330    | O
+* ### 2108    | X    | TLE
 * ### 2439    | O
-* ### 2487    | X    | time
+* ### 2487    | X    | TLE
 * ### 2557    | O
 * ### 2751    | O
 ##### TLE on python, solved with pypy3.
@@ -17,4 +18,4 @@ problem number | O or X
 * ### 10171   | O
 * ### 11399   | O
 * ### 11654   | O
-* ### 11812   | X    | memory
+* ### 11812   | X    | MLE
