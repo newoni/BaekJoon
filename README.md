@@ -5,6 +5,7 @@ BaekJoon programming (https://www.acmicpc.net/)  quiz code
 problem number | O or X
 
 * ### 1000    | O
+* ### 1001    | O
 * ### 1002    | O
 * ### 1008    | O
 * ### 1158    | X    | TLE
