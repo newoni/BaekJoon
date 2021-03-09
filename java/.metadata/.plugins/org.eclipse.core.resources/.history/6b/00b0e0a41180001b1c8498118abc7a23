@@ -1,0 +1,31 @@
+/*
+ <21. 03. 08>
+ made by KH
+ 
+ problem number: 14681
+ source: https://www.acmicpc.net/problem/14681
+ */
+package baekjoon;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class problem10950 {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		int inputNumber1 = Integer.parseInt(bf.readLine());
+		int inputNumber2 = Integer.parseInt(bf.readLine());
+		
+		if(inputNumber1>0 && inputNumber2>0) {
+			System.out.println(1);
+		}else if(inputNumber1>0 && inputNumber2<0){
+			System.out.println(4);
+		}else if(inputNumber1<0 && inputNumber2<0){
+			System.out.println(3);
+		}else if(inputNumber1<0 && inputNumber2>0){
+			System.out.println(2);
+		}
+	}
+}

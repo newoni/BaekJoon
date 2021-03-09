@@ -1,0 +1,24 @@
+/*
+ <21.03.08>
+ made by KH
+ problem number: 2562
+ source: https://www.acmicpc.net/problem/2562
+ */
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.List;
+
+public class problem2562 {
+
+	public static void main(String[] args) {
+		List<Integer> numberList;
+		
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	}
+
+}
