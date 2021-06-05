@@ -34,33 +34,53 @@ public class problem1158 {
 			peopleList.add(i);
 		}
 
-		//리턴용 요세푸스 순열 리스트 선언
 		List<Integer> resList = new ArrayList<Integer>();
+		//출력 준비
+		bw.write("<");
 
 		int cnt=1;
-		while(peopleList.size()!=0) { //peopleList 의 길이가 0이 될 때 까지 수행 + 요세푸스 기준 여부 체크
-			//cnt 값이 기준값이 될 경우 요세푸스 순열에 추가하고 최초 순열에서 해당 값 제거
+		for(int i=0; i<peopleList.size();i++) {
+			
+			//추가 기준 달성 시 추가
 			if(cnt==stdNum) {
+				System.out.println("cnt==stdNum 달성");
+				
+				resList.add(peopleList.get(i));
+				
+				// 정지 기준 달성시 정지
+				if(resList.size()==peopleNum) {
+					System.out.println("resList.size()==peopleNum 달성");
+					System.out.println("resList.size() 값: "+ resList.size());
+					System.out.println("peopleNum 값: "+ peopleNum);
+					System.out.println("resList 값: "+ resList);
+					System.out.println("정지 시 i 값: "+ i);
+					break;
+				}
+				
+				System.out.println("정지 기준 미달성");
+				System.out.println("resList 출력: " + resList);
 				cnt=1;
-				resList.add(peopleList.get(0));
-				peopleList.remove(0);
 				continue;
 			}
 			
-			peopleList.add(peopleList.get(0));
-			peopleList.remove(0);
+			//자신의 위치 추가 
+			peopleList.add(peopleList.get(i));
 			cnt++;
+			System.out.println(peopleList);
 		}
 		
-		System.out.print("<");
 		
-		for(int i=0; i<resList.size(); i++) {
-			System.out.print(resList.get(i));
-			if(i!=resList.size()-1) {
-				System.out.print(", ");
+		for(int j=0; j<resList.size(); j++) {
+			if(j!=resList.size()-1) {
+				bw.write(resList.get(j)+", ");
+			}
+			else {
+				bw.write(resList.get(j)+"");
 			}
 		}
-		System.out.print(">");
+		
+		bw.write(">");
+		bw.flush();
 	}
 
 }
