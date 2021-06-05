@@ -1,5 +1,5 @@
 /* 
- * <21.06.02>
+ * <21.06.05>
  * made by KH
  * problem number: 1158
  * source: https://www.acmicpc.net/problem/1158
@@ -21,46 +21,34 @@ public class problem1158 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));		
 		
+		//전체 수, 기준 수 입력 바기
+		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		int peopleNum = Integer.parseInt(st.nextToken());
 		int stdNum = Integer.parseInt(st.nextToken());
 
+		//최초 순열 생성
 		List<Integer> peopleList = new ArrayList<Integer>();
-
 		for(int i =1; i<=peopleNum ; i++) {
 			peopleList.add(i);
 		}
 
+		//리턴용 요세푸스 순열 리스트 선언
 		List<Integer> resList = new ArrayList<Integer>();
 
-		int cnt=0;
-		while(peopleList.size()!=0) { //peopleList 의 길이가 0이 될 때 까지 수행
-
-			int iterNum = peopleList.size()/stdNum;
-			if(iterNum!= 0) {
-				for(int j = 1; j<=iterNum; j++) {
-					resList.add(peopleList.get(j*stdNum -1));
-				}
-
-				for(int k = iterNum; k>=1 ; k--) {
-					peopleList.remove(k*stdNum -1);
-				}
-				
-				System.out.println("iteration: "+ cnt);
-				System.out.println("peopelList: "+ peopleList);
-				System.out.println("resList: "+ resList);
-
-			}else { // iterNum이 0일 때
-				while(peopleList.size()<stdNum) {
-					stdNum -= peopleList.size();
-				}
-				resList.add(peopleList.get(stdNum-1));
-				peopleList.remove(stdNum -1);
+		int cnt=1;
+		while(peopleList.size()!=0) { //peopleList 의 길이가 0이 될 때 까지 수행 + 요세푸스 기준 여부 체크
+			//cnt 값이 기준값이 될 경우 요세푸스 순열에 추가하고 최초 순열에서 해당 값 제거
+			if(cnt==stdNum) {
+				cnt=1;
+				resList.add(peopleList.get(0));
+				peopleList.remove(0);
+				continue;
 			}
-
+			
+			peopleList.add(peopleList.get(0));
+			peopleList.remove(0);
 			cnt++;
 		}
 		
