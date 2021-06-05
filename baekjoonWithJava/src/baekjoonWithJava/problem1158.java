@@ -43,22 +43,22 @@ public class problem1158 {
 			
 			//추가 기준 달성 시 추가
 			if(cnt==stdNum) {
-				System.out.println("cnt==stdNum 달성");
+//				System.out.println("cnt==stdNum 달성");
 				
 				resList.add(peopleList.get(i));
 				
 				// 정지 기준 달성시 정지
 				if(resList.size()==peopleNum) {
-					System.out.println("resList.size()==peopleNum 달성");
-					System.out.println("resList.size() 값: "+ resList.size());
-					System.out.println("peopleNum 값: "+ peopleNum);
-					System.out.println("resList 값: "+ resList);
-					System.out.println("정지 시 i 값: "+ i);
+//					System.out.println("resList.size()==peopleNum 달성");
+//					System.out.println("resList.size() 값: "+ resList.size());
+//					System.out.println("peopleNum 값: "+ peopleNum);
+//					System.out.println("resList 값: "+ resList);
+//					System.out.println("정지 시 i 값: "+ i);
 					break;
 				}
 				
-				System.out.println("정지 기준 미달성");
-				System.out.println("resList 출력: " + resList);
+//				System.out.println("정지 기준 미달성");
+//				System.out.println("resList 출력: " + resList);
 				cnt=1;
 				continue;
 			}
@@ -66,7 +66,7 @@ public class problem1158 {
 			//자신의 위치 추가 
 			peopleList.add(peopleList.get(i));
 			cnt++;
-			System.out.println(peopleList);
+//			System.out.println(peopleList);
 		}
 		
 		
