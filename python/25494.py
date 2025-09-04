@@ -4,8 +4,6 @@ made by KH
 
 problem number: 25494
 source: https://www.acmicpc.net/problem/25494
-
-(틀림)
 '''
 loopNumber = int(input())
 
